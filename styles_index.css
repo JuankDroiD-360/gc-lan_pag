@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #03f0b1; /* Adaptado del primer CSS */
+}
+
+header {
+    background-color: #121212; /* Adaptado del color de la right-section */
+    color: #00ff7f; /* Adaptado del color del texto en la right-section */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #00ff7f; /* Adaptado del color del texto en la right-section */
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 50px 10%;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imgs/casita.jpg'); /* Ruta de la imagen que subiste */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75; /* Opacidad al 50% solo para la imagen de fondo */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Mantener el contenido por encima de la imagen de fondo */
+    color: white;
+}
+
+.hero-section img {
+    max-width: 45%;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2; /* Asegurarse de que la imagen de la casa no esté afectada por la opacidad */
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.features-section, .testimonials-section, .contact-section {
+    padding: 50px 10%;
+    background-color: white;
+    margin: 20px 0;
+}
+
+.features-section h2, .testimonials-section h2, .contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.feature img {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.feature h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.testimonials-section blockquote {
+    background-color: #03f0b1; /* Adaptado del color de fondo */
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid #00ff7f; /* Adaptado del color del texto */
+}
+
+.testimonials-section blockquote p {
+    font-size: 1.2em;
+}
+
+.testimonials-section blockquote cite {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-style: normal;
+    color: #00ff7f; /* Adaptado del color del texto */
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section form input, .contact-section form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section form button {
+    background-color: #00ff7f; /* Adaptado del color del botón */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #121212; /* Adaptado del color de la right-section */
+    color: #00ff7f; /* Adaptado del color del texto */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: #00ff7f; /* Adaptado del color del texto */
+    text-decoration: none;
+}
+

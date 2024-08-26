@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GC Inmobiliaria</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Añadir una clase a la sección derecha para animarla
+            const rightSection = document.querySelector('.right-section');
+            rightSection.classList.add('show');
+
+            // Agregar efecto de desplazamiento suave al hacer clic en enlaces de navegación
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>GC Inmobiliaria</h1>
+            <p>Parrafo. Haz clic aquí para agregar tu propio texto y editar. Aquí puedes contar tu historia y permitir a tus usuarios saber más sobre ti.</p>
+        </div>
+        <div class="right-section">
+            <h2>Descubre tu nuevo hogar</h2>
+            <p>¡Contáctanos para recibir la mejor oferta del mercado!</p>
+            <!-- Se agrega action para enviar datos al archivo PHP -->
+            <form action="process_form.php" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido *</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Introduce tu apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="Introduce tu email" required>
+                </div>
+                <div class="form-group">
+                    <label for="numero">Número *</label>
+                    <input type="number" id="numero" name="numero" placeholder="Introduce tu numero" required></input>
+                </div>
+                <button type="submit">¡Contacta e infórmate!</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
